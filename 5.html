@@ -1,0 +1,70 @@
+<html>  
+   <head>
+    <title>page 5</title>	
+	<link rel="stylesheet" type="text/css" href="all.css">	
+	<script type="text/javascript">
+	<!--
+	function validateForm()
+	{
+		if (document.employeeForm.emp_name.value=="")
+		{
+			alert( "name cannot be empty" );
+			document.employeeForm.emp_name.focus() ;
+			return false;
+		}
+		if (document.employeeForm.emp_address.value=="")
+		{
+			alert( "address cannot be empty" );
+			document.employeeForm.emp_address.focus() ;
+			return false;
+		}
+		if (document.employeeForm.emp_salary.value=="")
+		{
+			alert( "salary cannot be empty" );
+			document.employeeForm.emp_salary.focus() ;
+			return false;
+		}			
+		return true;
+	}	
+	 //-->
+	</script>
+	<style>
+		h2, input[type = "text"]
+        {
+            font-family:arial;
+			font-style:normal;
+			font-size: normal;
+			color:green;
+       }
+	</style>
+
+   </head> 
+   <body>  
+    <h2>Add Instructor Information</h2>     
+    <form name="employeeForm" action="2.php" onsubmit="return validateForm()" method = "post">
+        <table width = "400" border = "0" cellspacing = "1" cellpadding = "2">                  
+            <tr>
+            <td width = "100">Instructor Name</td>
+            <td><input name = "emp_name" type = "text" id = "emp_name"></td>
+            </tr>
+			<tr>
+            <td width = "100">Instructor Address</td>
+            <td><input name = "emp_address" type = "text" id = "emp_address"></td>
+            </tr>                  
+            <tr>
+            <td width = "100">Instructor Salary</td>
+            <td><input name = "emp_salary" type = "text" id = "emp_salary"></td>
+            </tr>                  
+            <tr>
+            <td width = "100"> </td>
+            <td> </td>
+            </tr>                  
+            <tr>
+            <td width = "100"> </td>
+            <td><input name = "add" type = "submit" id = "add" value = "Add Instructor">
+            </td>
+            </tr>
+		</table>
+    </form>   
+   </body>
+</html>
