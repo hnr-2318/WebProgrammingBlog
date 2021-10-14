@@ -4,7 +4,7 @@
    $dbhost = "localhost:3306";
    $dbuser = "root";
    $dbpass = "";
-   $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+   $conn = new mysqli($dbhost, $dbuser, $dbpass);
    
    if(! $conn ) 
    {
@@ -15,11 +15,11 @@
 	   print("connected <br/>");
    }
        
-   mysql_select_db("Employee_info");  
+    $conn->select_db("Employee_info");  
    
    //---------Perform a query------------------------ 
    $sql = "SELECT * FROM employee where emp_name = \"$emp_name\""; 
-   $retval = mysql_query( $sql, $conn );
+   $retval = $conn->query($sql);
    
    if(! $retval ) 
    {
@@ -30,12 +30,13 @@
 	 print("data is retrieved<br/>");  
    }   
 
-   while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) 
+   while($row = $retval->fetch_assoc()) 
    {
       echo "Instructor Name :{$row['emp_name']}  <br/> ".
          "--------------------------------<br>";
    } 
    print("data is printed<br/>");
+
+   $conn->close();
   
-   mysql_close($conn);
 ?>
