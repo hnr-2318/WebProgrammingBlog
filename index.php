@@ -1,5 +1,5 @@
- <!-- URL format /post.php?postId=<number> -->
-<?php echo file_get_contents("../html/common/header.html"); ?>
+
+<?php echo file_get_contents("./html/common/header.html"); ?>
 
 <!-- Get posts from database -->
 <?php
@@ -15,22 +15,13 @@
    }
    else
    {
-	   //print("connected <br/>");
+	   // print("connected <br/>");
    }
 
    $conn->select_db("blogs");
 
-   $postId = -1;
-   // Basic input validation
-    if (isset($_GET['postId']) && is_numeric($_GET['postId'])) {
-        $postId = $_GET['postId'];
-   }
-   if ( $postId == -1 ) {
-       http_response_code(404);
-       die();
-   }
    //---------Perform a query------------------------ 
-   $sql = "SELECT * FROM posts where p_Id={$postId}"; 
+   $sql = "SELECT * FROM posts limit 10"; 
    $retval = $conn->query($sql);
    
    if(! $retval ) 
@@ -44,11 +35,12 @@
 
    while($row = $retval->fetch_assoc()) 
    {
-      echo "{$row['text']} <br/>".
+      echo "Post :{$row['p_ID']}  <br/>".
+        "<a href='actions/post.php?postId={$row['p_ID']}' >Link </a><br/>".
+        "{$row['text']} <br/>".
          "--------------------------------<br/><br/>";
    } 
    $conn->close();
 ?>
 
-
-<?php echo file_get_contents("../html/common/footer.html"); ?>
+<?php echo file_get_contents("./html/common/footer.html"); ?>
