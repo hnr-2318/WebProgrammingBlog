@@ -13,7 +13,7 @@
        $postId = 1;
    }
    //---------Perform a query------------------------ 
-   // Sql injection
+   // Sql injection Fix todo, neeed to allow performQuery to support placeholders
    $sql = "SELECT * FROM posts where p_Id={$postId}"; 
    $retval = performQuery($conn,$sql);
     
