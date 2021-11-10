@@ -3,37 +3,19 @@
 
 <!-- Get posts from database -->
 <?php
- //----------connect to MySQL system-------------- 
-   $dbhost = "localhost:3306";
-   $dbuser = "root";
-   $dbpass = "";
-   $conn = new mysqli($dbhost, $dbuser, $dbpass);
-   
-   if(! $conn ) 
-   {
-      die("Could not connect: " . mysql_error());
-   }
-   else
-   {
-	   // print("connected <br/>");
-   }
+    // Connect to DB
+    require __DIR__ . './functions.php';
+    $conn = connectToDatabase();
+    $conn->select_db("blogs");
 
-   $conn->select_db("blogs");
-
-   //---------Perform a query------------------------ 
+    // Perform Query
    $sql = "SELECT * FROM posts limit 10"; 
-   $retval = $conn->query($sql);
-   
-   if(! $retval ) 
-   {
-      die("Could not retrieve data : " . mysql_error());
-   }   
-   else
-   {
-	//  print("data is retrieved<br/>");  
-   }   
+   $retval = performQuery($conn,$sql);
 
-   while($row = $retval->fetch_assoc()) 
+   $posts = $retval->fetch_all(MYSQLI_ASSOC);
+
+
+   foreach ($posts as $row) 
    {
       echo "Post :{$row['p_ID']}  <br/>".
         "<a href='actions/post.php?postId={$row['p_ID']}' >Link </a><br/>".
