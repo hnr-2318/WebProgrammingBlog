@@ -1,0 +1,1 @@
+<?php echo file_get_contents("./html/common/header.html"); ?>
