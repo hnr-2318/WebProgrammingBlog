@@ -382,7 +382,7 @@ button {
 
 .titlepage {
      text-align: center;
-     padding-bottom: 60px;
+     padding-bottom: 25px;
 }
 
 .titlepage h2 {
@@ -391,7 +391,7 @@ button {
      line-height: 57px;
      font-weight: bold;
      padding: 0;
-     padding-bottom: 20px;
+     padding-bottom: 10px;
 }
 
 .d_flex {
