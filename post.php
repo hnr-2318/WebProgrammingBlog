@@ -1,10 +1,10 @@
  <!-- URL format /post.php?postId=<number> -->
-<?php echo file_get_contents("../html/common/header.html"); ?>
+<?php echo file_get_contents("./html/common/header.html"); ?>
 
 <!-- Get posts from database -->
 <?php
     // Connect to DB
-    require __DIR__ . '../../functions.php';
+    require __DIR__ . './functions.php';
     $conn = connectToDatabase();
     $conn->select_db("blogs");
 
@@ -26,4 +26,4 @@
 ?>
 
 
-<?php echo file_get_contents("../html/common/footer.html"); ?>
+<?php echo file_get_contents("./html/common/footer.html"); ?>
