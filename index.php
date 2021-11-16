@@ -1,5 +1,5 @@
 
-<?php include("./html/common/header.php"); ?>
+<?php include("./common/header.php"); ?>
 
 <?php 
    if(!isset($_SESSION['username'])) 
@@ -104,4 +104,4 @@
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
-<?php echo file_get_contents("./html/common/footer.html"); ?>
+<?php echo file_get_contents("./common/footer.html"); ?>
