@@ -13,7 +13,7 @@
 
     function performQuery($conn, $sql) {
         $retval = $conn->query($sql);
-        if(! $retval ) 
+        if( !$retval ) 
         {
             die("Could not retrieve data : " . mysql_error());
         }   

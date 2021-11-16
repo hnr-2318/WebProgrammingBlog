@@ -1,5 +1,5 @@
  <!-- URL format /post.php?postId=<number> -->
-<?php echo file_get_contents("./html/common/header.html"); ?>
+<?php include("./html/common/header.php") ?>
 
 <!-- Get posts from database -->
 <?php

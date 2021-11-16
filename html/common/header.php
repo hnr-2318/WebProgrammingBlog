@@ -1,3 +1,11 @@
+<?php
+    $logout_display = true;
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        $logout_display = false;
+    }
+
+?>
 <html>
 
 <head>
@@ -41,7 +49,7 @@
                             <div class="full">
                                 <div class="center-desk">
                                     <div class="logo">
-                                        <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                                        <a href="index.php"><img src="images/logo.png" alt="#" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -61,9 +69,14 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="#contact">About</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="./login.php">Login</a>
-                                        </li>
+                                        <?php 
+                                            if ($logout_display) {
+                                                echo 
+                                                    '<li class="nav-item">'.
+                                                    '<a class="nav-link" href="./logout.php">Log out</a>'.
+                                                    '</li>';
+                                            }
+                                        ?>
                                     </ul>
                                 </div>
                             </nav>

@@ -1,6 +1,12 @@
 
-<?php echo file_get_contents("./html/common/header.html"); ?>
+<?php include("./html/common/header.php"); ?>
 
+<?php 
+   if(!isset($_SESSION['username'])) 
+   {
+        header('Location: login.php');
+   }
+?>
 <!-- Get posts from database -->
 <?php
     // Connect to DB
@@ -23,6 +29,8 @@
     //     "--------------------------------<br/><br/>";
    //} 
    $conn->close();
+
+  
 ?>
       
       <!-- end loader -->
