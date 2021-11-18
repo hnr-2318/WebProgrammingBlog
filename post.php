@@ -4,7 +4,7 @@
 <!-- Get posts from database -->
 <?php
     // Connect to DB
-    require __DIR__ . './functions.php';
+    include('./functions.php');
     $conn = connectToDatabase();
     $conn->select_db("blogs");
 

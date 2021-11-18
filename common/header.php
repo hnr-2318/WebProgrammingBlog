@@ -1,9 +1,9 @@
 <?php include_once('config.php') ?>
 
 <?php 
-    $logout_display = true;
-    if (!isset($_SESSION['username'])) {
-        $logout_display = false;
+    $username = "";
+    if (isset($_SESSION['username'])) {
+        $username = $_SESSION['username'];
     }
 ?>
 <html>
@@ -70,10 +70,14 @@
                                             <a class="nav-link" href="#contact">About</a>
                                         </li>
                                         <?php 
-                                            if ($logout_display) {
+                                            if ($username !== "") {
                                                 echo 
                                                     '<li class="nav-item">'.
                                                     '<a class="nav-link" href="./logout.php">Log out</a>'.
+                                                    '</li>';
+                                                 echo 
+                                                    '<li class="nav-item">'.
+                                                    "Welcome {$username}".
                                                     '</li>';
                                             }
                                         ?>
