@@ -1,7 +1,12 @@
  <!-- URL format /post.php?postId=<number> -->
 <?php include("./common/header.php") ?>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-7 text-center mb-5"><br>
+            <!-- Get posts from database -->
+          <h4>  
 
-<!-- Get posts from database -->
+ <!-- Get posts from database -->
 <?php
     // Connect to DB
     include('./functions.php');
@@ -19,11 +24,18 @@
     
    while($row = $retval->fetch_assoc()) 
    {
-      echo "{$row['text']} <br/>".
-         "--------------------------------<br/><br/>";
+          echo "<h2>{$row['title']} </h2>";
+                echo "{$row['date']} <hr>";
+                echo "{$row['text']} <br/>".
+                "--------------------------------<br/><br/>";
+      
    } 
    $conn->close();
 ?>
-
+            </h4>
+        </div>
+    </div>
+</div>
+<?php echo file_get_contents("viewPost.html"); ?>
 
 <?php echo file_get_contents("./common/footer.html"); ?>
