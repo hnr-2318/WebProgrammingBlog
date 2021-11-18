@@ -74,14 +74,14 @@
                         <?php foreach ($posts as $post) : ?>
                             <div class="col-md-6">
                            <div class="our_img">
-                              <figure><img src="images/our_img4.jpg" alt="#"/></figure>
+                              <figure><img src=<?php echo $post['imgUrl'] ?> alt="#"/></figure>
                            </div>
                            <div class="our_text_box three_box">
                               <div class="post_box d_flex padding_top3">
-                                  <h3 class="awesome padding_flot"><?php echo $post['postDesc']; ?></h3>
+                                  <h3 class="awesome padding_flot"><?php echo $post['title']; ?></h3>
                                  <h4 class="flot_left1">Post By : <?php echo $post['author_ID']; ?> </h4>
                               </div>
-                              <p><?php echo $post['text']; ?></p> <br>
+                              <p><?php echo $post['postDesc']; ?></p> <br>
                               <a class="btn btn-primary text-center" href="./post.php?postId=<?php echo $post['p_ID'] ?>">Link</a>
                            </div>
                         </div>
