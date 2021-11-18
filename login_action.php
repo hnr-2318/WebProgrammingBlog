@@ -1,7 +1,7 @@
 <?php
 
     // Connect to DB
-    require __DIR__ . './functions.php';
+    require('./functions.php');
     $conn = connectToDatabase();
     $conn->select_db("blogs");
 
