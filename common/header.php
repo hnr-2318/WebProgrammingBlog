@@ -80,6 +80,12 @@
                                                     "Welcome {$username}".
                                                     '</li>';
                                             }
+                                            else {
+                                                echo 
+                                                    '<li class="nav-item">'.
+                                                    '<a class="nav-link" href="./register.html">Register</a>'.
+                                                    '</li>';
+                                            }
                                         ?>
                                     </ul>
                                 </div>
