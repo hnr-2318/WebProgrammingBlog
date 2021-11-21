@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	background: #84889c;
+}
+ 
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner{
+	background: #545871;
+	padding: 25px;
+	border-radius: 5px;
+	width: 400px;
+}
+
+.form-group{
+	margin-top: 35px;
+}
+
+.form-group .form-wrapper{
+	margin-bottom: 15px;
+}
+
+.form-group .form-wrapper:last-child{
+	margin-bottom: 0;
+}
+
+.form-wrapper .input_wrap label{
+	display: block;
+	margin-bottom: 3px;
+	color: #9597a6;
+}
+
+.form-group .form-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-wrapper .input_grp  input[type="text"]{
+	width: 165px;
+}
+
+.form-wrapper  input[type="text"]{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+
+.form-group  input[type="text"]:focus{
+	border-color: #ebd0ce;
+}
+
+.form-group ul{
+	background: #fff;
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+}
+
+.form-group ul li:first-child{
+	margin-right: 15px;
+}
+
+.form-group ul .{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.form-wrapper ul .{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.form-wrapper ul . span{
+	display: inline-block;
+	font-size: 14px;
+	padding: 3px 20px;
+	border-radius: 3px;
+	color: #545871;
+}
+
+.form-wrapper .form-control ~ span{
+	background: #ebd0ce;
+}
+
+.form-wrapper .{
+	width: 100%;
+	background: #ebd0ce;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+.form-wrapper .form-wrapper:last-child:hover{
+	background: #ffd5d2;
+}
