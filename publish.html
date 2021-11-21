@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Create Blog Post</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/login-style.css">
+
+    </head>
+    
+    <body class="img js-fullheight" style="background-image: url(images/banner.png);">
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <h2 class="heading-section">Create Blog Post</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="form-wrapper">
+                            <form action="./publish.php" method="post" class="signin-form">
+                                <div class="form-group">
+                                    <input name="title" type="text" class="form-control" placeholder="Title" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="postDesc" type="text" class="form-control" placeholder="Description" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input name="date" type="date" class="form-control" placeholder="Today" required>
+                                </div>
+                                <div class="form-group">
+                                    <input name="imgUrl" type="text" class="form-control" placeholder="Image Link" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="text" type="text" class="form-control" placeholder="Text" rows="8" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Publish</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+
