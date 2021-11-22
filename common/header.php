@@ -73,6 +73,11 @@
                                             if ($username !== "") {
                                                 echo 
                                                     '<li class="nav-item">'.
+                                                    '<a class="nav-link" href="./publish.php">Publish Post</a>'.
+                                                    '</li>';
+
+                                                echo 
+                                                    '<li class="nav-item">'.
                                                     '<a class="nav-link" href="./logout.php">Log out</a>'.
                                                     '</li>';
                                                  echo 
