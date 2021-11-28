@@ -36,6 +36,22 @@
         </div>
     </div>
 </div>
-<?php echo file_get_contents("viewPost.html"); ?>
+<div class="container col-7">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+	          <p class="w-100 text-center">&mdash; Comment Below &mdash;</p><br>
+				</div>
+			</div>
+			<div class="form-wrapper">
+				<form action="./comment_action.php" method="post" class="signin-form">
+					<div class="form-group">
+						<textarea name="comment" type="text" class="form-control" maxlength="180" rows="5" required></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="form-control btn btn-primary submit px-3">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
 
 <?php echo file_get_contents("./common/footer.html"); ?>
