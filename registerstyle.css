@@ -10,7 +10,7 @@
 
 body{
 	background: rgb(223,178,201);
-	background: radial-gradient(circle, rgba(223,178,201,1) 19%, rgba(193,170,157,1) 100%, rgba(58,37,91,1) 100%);
+	background: radial-gradient(circle, rgb(206, 188, 197) 19%, rgba(193,170,157,1) 100%, rgba(58,37,91,1) 100%);
 }
  
 .wrapper{
@@ -21,10 +21,11 @@ body{
 }
 
 .inner{
-	background: #4f4d5f;
+	background: #464552;
 	padding: 25px;
 	border-radius: 5px;
 	width: 400px;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 	
 }
 .inner .title{

@@ -1,41 +1,55 @@
-<!doctype html>
-<html lang="en">
-  <head>
-  	<title>View Post</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<title>View Posts</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="css/style.css">
-
+		<link rel="stylesheet" href="viewPosts_style.css">
 	</head>
-	<body class="img js-fullheight">
-		<div class="container col-7">
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-4">
-	          <p class="w-100 text-center">&mdash; Comment Below &mdash;</p><br>
+	<body>
+		<div class="blog">
+			<div class="container">
+				<div class="owl-carousel owl-theme blog-post">
+					<div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+						<img src="./assets/Blog-post/post-1.jpg" alt="post-1">
+						<div class="blog-title">
+							<h3>Blog Title 1</h3>
+							<button class="btn btn-blog">See Full Post</button>
+							<span>10 minute read</span>
+						</div>
+					</div>
+					<div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+						<img src="./assets/Blog-post/post-3.jpg" alt="post-2">
+						<div class="blog-title">
+							<h3>Blog Title 2</h3>
+							<button class="btn btn-blog">See Full Post</button>
+							<span>18 minute read</span>
+						</div>
+					</div>
+					<div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+						<img src="./assets/Blog-post/post-2.jpg" alt="post-3">
+						<div class="blog-title">
+							<h3>Blog Title 3</h3>
+							<button class="btn btn-blog">See Full Post </button>
+							<span>6 minute read</span>
+						</div>
+					</div>
+					<div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+						<img src="./assets/Blog-post/post-5.png" alt="post-4">
+						<div class="blog-title">
+							<h3>Blog Title 4</h3>
+							<button class="btn btn-blog">See Full Post</button>
+							<span>15 minute read</span>
+						</div>
+					</div>
+				</div>
+				<div class="owl-navigation">
+					<span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+					<span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
 				</div>
 			</div>
-			<div class="form-wrapper">
-				<form action="./comment_action.php" method="post" class="signin-form">
-					<div class="form-group">
-						<textarea name="comment" type="text" class="form-control" maxlength="180" rows="5" required></textarea>
-					</div>
-					<div class="form-group">
-						<button type="submit" class="form-control btn btn-primary submit px-3">Submit</button>
-					</div>
-				</form>
-			</div>
 		</div>
-
-		<script src="js/jquery.min.js"></script>
-		<script src="js/popper.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
-
 	</body>
 </html>
-
