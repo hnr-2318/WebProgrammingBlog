@@ -21,6 +21,10 @@
    // Sql injection Fix todo, neeed to allow performQuery to support placeholders
    $sql = "SELECT * FROM posts where p_Id={$postId}"; 
    $retval = performQuery($conn,$sql);
+
+   $commentsQuery = "SELECT * from comments where p_Id={$postId}";
+   $commentsRet = performQuery($conn,$commentsQuery);
+   $comments = $commentsRet->fetch_all(MYSQLI_ASSOC);
     
    while($row = $retval->fetch_assoc()) 
    {
@@ -43,7 +47,7 @@
 				</div>
 			</div>
 			<div class="form-wrapper">
-				<form action="./comment_action.php" method="post" class="signin-form">
+				<form action="./comment_action.php?postId=<?php echo $postId ?>" method="post" class="signin-form">
 					<div class="form-group">
 						<textarea name="comment" type="text" class="form-control" maxlength="180" rows="5" required></textarea>
 					</div>
@@ -52,6 +56,9 @@
 					</div>
 				</form>
 			</div>
+            <?php foreach($comments as $comment) : ?>
+                <p><?php echo $comment['text'] ?></p>
+            <?php endforeach; ?>
 		</div>
 
 <?php echo file_get_contents("./common/footer.html"); ?>

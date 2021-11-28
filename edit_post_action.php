@@ -24,7 +24,6 @@
       }else {
           echo "Error updating record: " . mysqli_error($conn);
          $error = "Error Creating Post";
-         header("location: error.php");
          
       }
    }
