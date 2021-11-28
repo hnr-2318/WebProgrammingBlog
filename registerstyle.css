@@ -9,7 +9,8 @@
 }
 
 body{
-	background: #7f7491;
+	background: rgb(223,178,201);
+	background: radial-gradient(circle, rgba(223,178,201,1) 19%, rgba(193,170,157,1) 100%, rgba(58,37,91,1) 100%);
 }
  
 .wrapper{
@@ -20,14 +21,14 @@ body{
 }
 
 .inner{
-	background: #62566b;
+	background: #4f4d5f;
 	padding: 25px;
 	border-radius: 5px;
 	width: 400px;
 	
 }
 .inner .title{
-	color: rgb(221, 188, 193);
+	color: rgb(241, 177, 160);
 	text-align: center;
 	font-size: 25px;
 	text-transform: uppercase;
@@ -38,7 +39,7 @@ body{
 
 .form-group{
 	margin-top: 35px;
-	color: #fff
+	color: rgb(203, 204, 209)
 }
 
 .form-group .form-wrapper{
@@ -50,11 +51,16 @@ body{
 }
 
 .form-group ul{
-	background: #fff;
+	background: rgb(211, 213, 223);
 	padding: 8px 10px;
 	border-radius: 3px;
 	display: flex;
 	justify-content: center;
+}
+
+.form-group .form-control{
+	width: 100%;
+	padding: 4px;
 }
 
 .form-end .submit-button{
@@ -70,6 +76,6 @@ body{
 }
 
 .form-end .submit-button:hover{
-	background: #ffd5d2;
+	background: #df8686;
 	
 }
