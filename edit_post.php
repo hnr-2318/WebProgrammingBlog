@@ -53,7 +53,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="form-wrapper">
-                            <form action="./edit_post_action.php" method="post" class="signin-form">
+                            <form action="./edit_post_action.php?postId=<?php echo $postId ?>" method="post" class="signin-form">
                                 <div class="form-group">
                                     <input value="<?php echo $title ?>" name="title" type="text" class="form-control" placeholder="Title" required>
                                 </div>
