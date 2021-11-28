@@ -17,7 +17,7 @@
 
       if($result == 1) {
          $_SESSION['username'] = $myusername;
-         header("location: index.php");
+         header("location: registered.php");
       }else {
          $error = "Error Creating Account";
          header("location: login.php");
