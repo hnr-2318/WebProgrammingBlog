@@ -20,10 +20,13 @@
         return $retval;
     }
 
-    function getUserNameById($conn,$id) {
-        $sql = "SELECT username FROM 'users' WHERE u_ID='$id'";
-        $res = performQuery($conn,$sql);
-        return $res->fetch_row()[0];
+    function getUserNameById($id) {
+        $conn = connectToDatabase();
+        $conn->select_db("blogs");
+        $sql = "SELECT * FROM users where u_ID=$id";
+        $res = $conn->query($sql);
+        $row = $res->fetch_row();
+        return $row[4];
     }
 
 ?>

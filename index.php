@@ -11,14 +11,22 @@
 <?php
     // Connect to DB
     require __DIR__ . './functions.php';
+    $username = getUserNameById(1);
     $conn = connectToDatabase();
     $conn->select_db("blogs");
+
 
     // Perform Query
    $sql = "SELECT * FROM posts limit 10"; 
    $retval = performQuery($conn,$sql);
 
    $posts = $retval->fetch_all(MYSQLI_ASSOC);
+   foreach($posts as $key => $value)
+    {
+        //echo getUserNameById($posts[$key]['author_ID']);
+        //echo '<br>';
+        $posts[$key]['author_ID'] = getUserNameById($posts[$key]['author_ID']);
+    }
 
 
    //foreach ($posts as $row) 
