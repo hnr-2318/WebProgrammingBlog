@@ -90,7 +90,7 @@
                                  <h4 class="flot_left1">Post By : <?php echo $post['author_ID']; ?> </h4>
                               </div>
                               <p><?php echo $post['postDesc']; ?></p> <br>
-                              <a class="btn btn-primary text-center" href="./post.php?postId=<?php echo $post['p_ID'] ?>">Link</a>
+                              <a class="btn btn-primary text-center" href="./post.php?postId=<?php echo $post['p_ID'] ?>">View</a>
                               <a class="btn btn-primary text-center" href="./edit_post.php?postId=<?php echo $post['p_ID'] ?>">Edit</a>
                            </div>
                         </div>
