@@ -92,6 +92,7 @@
                               <p><?php echo $post['postDesc']; ?></p> <br>
                               <a class="btn btn-primary text-center" href="./post.php?postId=<?php echo $post['p_ID'] ?>">View</a>
                               <a class="btn btn-primary text-center" href="./edit_post.php?postId=<?php echo $post['p_ID'] ?>">Edit</a>
+                              <a class="btn btn-primary text-center" href="./delete_post_action.php?postId=<?php echo $post['p_ID'] ?>">Delete</a>
                            </div>
                         </div>
                         <?php endforeach; ?>
