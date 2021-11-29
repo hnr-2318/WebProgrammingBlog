@@ -28,9 +28,9 @@
     
    while($row = $retval->fetch_assoc()) 
    {
-          echo "<h2>{$row['title']} </h2>";
+          echo "<h2> {$row['title']} </h2>";
                 echo "{$row['date']} <hr>";
-                echo "{$row['text']} <br/>".
+                echo "<p style='font-size:120%;'> {$row['text']} </p><br/>".
                 "--------------------------------<br/><br/>";
       
    } 
@@ -43,7 +43,7 @@
 <div class="container col-7">
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
-	          <p class="w-100 text-center">&mdash; Comment Below &mdash;</p><br>
+	          <h3 class="w-100 text-center">&mdash; Comment Below &mdash;</h3><br>
 				</div>
 			</div>
 			<div class="form-wrapper">
@@ -56,9 +56,14 @@
 					</div>
 				</form>
 			</div>
+            <div class="container col-11"><br>
             <?php foreach($comments as $comment) : ?>
-                <p><?php echo $comment['text'] ?></p>
+                <div class="our_text_box three_box">
+                    <p style="font-size:100%;"><?php echo $comment['text'] ?></p><hr>
+                    <?php echo $comment['date'] ?>
+                </div><br>
             <?php endforeach; ?>
 		</div>
+        </div>
 
 <?php echo file_get_contents("./common/footer.html"); ?>
