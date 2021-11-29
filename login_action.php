@@ -28,7 +28,7 @@
          header("location: index.php");
       }else {
          $error = "Your Login Name or Password is invalid";
-         header("location: login.php");
+         header("location: login.php?failure=1");
          
       }
    }
