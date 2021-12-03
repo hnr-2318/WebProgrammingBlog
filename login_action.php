@@ -12,7 +12,7 @@
       // username and password sent from form 
       
       $myusername = $conn->real_escape_string($_POST['username']);
-      $mypassword = $conn->real_escape_string($_POST['password']);
+      $mypassword = md5($conn->real_escape_string($_POST['password']));
       
       $sql = "SELECT u_ID FROM users WHERE username = '$myusername' and password = '$mypassword'";
       $result = $conn->query($sql);
