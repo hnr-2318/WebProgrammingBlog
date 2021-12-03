@@ -25,15 +25,15 @@
    $commentsQuery = "SELECT * from comments where p_Id={$postId}";
    $commentsRet = performQuery($conn,$commentsQuery);
    $comments = $commentsRet->fetch_all(MYSQLI_ASSOC);
-    
-   while($row = $retval->fetch_assoc()) 
-   {
-          echo "<h2> {$row['title']} </h2>";
-                echo "{$row['date']} <hr>";
+   $row = $retval->fetch_assoc();
+
+   $author = getUserNameById($row['author_ID']);
+          echo "<h2> {$row['title']} </h2><hr>";
+                echo "{$row['date']}<br>";
+                echo "By {$author} <hr>";
                 echo "<p style='font-size:120%;'> {$row['text']} </p><br/>".
                 "--------------------------------<br/><br/>";
       
-   } 
    $conn->close();
 ?>
             </h4>
