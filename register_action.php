@@ -10,7 +10,7 @@
       $firstname = $conn->real_escape_string($_POST['firstname']);
       $lastname = $conn->real_escape_string($_POST['lastname']);
       $email= $conn->real_escape_string($_POST['email']);
-      $mypassword = $conn->real_escape_string($_POST['password']);
+      $mypassword = md5($conn->real_escape_string($_POST['password']));
       
       $sql = "INSERT INTO `users` (first_name,last_name,email,username,password) VALUES ('$firstname','$lastname','$email','$myusername','$mypassword')";
       $result = $conn->query($sql);
