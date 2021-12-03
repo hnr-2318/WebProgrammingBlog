@@ -21,12 +21,7 @@
    // Sql injection Fix todo, neeed to allow performQuery to support placeholders
    $sql = "SELECT * FROM posts where p_Id={$postId}"; 
    $retval = performQuery($conn,$sql);
-
-   $commentsQuery = "SELECT * from comments where p_Id={$postId}";
-   $commentsRet = performQuery($conn,$commentsQuery);
-   $comments = $commentsRet->fetch_all(MYSQLI_ASSOC);
    $row = $retval->fetch_assoc();
-
    $author = getUserNameById($row['author_ID']);
           echo "<h2> {$row['title']} </h2><hr>";
                 echo "{$row['date']}<br>";
@@ -34,7 +29,16 @@
                 echo "<p style='font-size:120%;'> {$row['text']} </p><br/>".
                 "--------------------------------<br/><br/>";
       
-   $conn->close();
+    $commentsQuery = "SELECT * from comments where p_Id={$postId}";
+   $commentsRet = performQuery($conn,$commentsQuery);
+   $comments = $commentsRet->fetch_all(MYSQLI_ASSOC);
+   foreach($comments as $key => $value)
+    {
+        //echo getUserNameById($posts[$key]['author_ID']);
+        //echo '<br>';
+        $comments[$key]['u_ID'] = getUserNameById($comments[$key]['u_ID']);
+    }
+
 ?>
             </h4>
         </div>
@@ -60,6 +64,7 @@
             <?php foreach($comments as $comment) : ?>
                 <div class="our_text_box three_box">
                     <p style="font-size:100%;"><?php echo $comment['text'] ?></p><hr>
+                    <p>Username: <?php echo $comment['u_ID']; ?> </p><br>
                     <?php echo $comment['date'] ?>
                 </div><br>
             <?php endforeach; ?>
