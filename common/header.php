@@ -93,6 +93,11 @@
                                                     '</li>';
                                             }
                                         ?>
+                                        <div class="nav-search">
+                                            <a class="active"</a>
+                                            <input type="text" placeholder="Search...">
+                                            <input type="submit" name=submit">
+                                        </div>
                                     </ul>
                                 </div>
                             </nav>
