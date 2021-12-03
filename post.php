@@ -34,6 +34,13 @@
                 "--------------------------------<br/><br/>";
       
    } 
+   foreach($comments as $key => $value)
+    {
+        //echo getUserNameById($posts[$key]['author_ID']);
+        //echo '<br>';
+        $comments[$key]['u_ID'] = getUserNameById($comments[$key]['u_ID']);
+    }
+
    $conn->close();
 ?>
             </h4>
@@ -60,6 +67,7 @@
             <?php foreach($comments as $comment) : ?>
                 <div class="our_text_box three_box">
                     <p style="font-size:100%;"><?php echo $comment['text'] ?></p><hr>
+                    <p>Post By : <?php echo $comment['u_ID']; ?> </p><br>
                     <?php echo $comment['date'] ?>
                 </div><br>
             <?php endforeach; ?>
