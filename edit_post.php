@@ -8,6 +8,11 @@
     $conn = connectToDatabase();
     $conn->select_db("blogs");
 
+    $tagSql = "SELECT * FROM tags limit 10"; 
+    $tagRet = performQuery($conn,$tagSql);
+ 
+    $tags = $tagRet->fetch_all(MYSQLI_ASSOC); 
+
    $postId = filter_input(INPUT_GET,'postId',FILTER_VALIDATE_INT);
    if ($postId == NULL || $postId == FALSE) {
        $postId = 1;
@@ -76,10 +81,9 @@
                                 <div class="form-group">
                                     <label for="tags">Choose a tag:</label>
                                         <select name="tags" id="tags">
-                                            <option value="1">Entertainment</option>
-                                            <option value="2">Technology</option>
-                                            <option value="3">Education</option>
-                                            <option value="4">Literature</option>
+                                            <?php foreach ($tags as $tag) : ?>
+                                                <option value="<?php echo $tag['t_ID'] ?>"><?php echo $tag['tag_name'] ?></option>
+                                            <?php endforeach; ?>
                                         </select>
                                 </div>
                                 <div class="form-group">

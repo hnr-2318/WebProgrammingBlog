@@ -15,9 +15,13 @@
       $text = $conn->real_escape_string($_POST['text']);
       //$date = date('Y-m-d', strtotime($_POST['date']));
       $imgUrl = $conn->real_escape_string($_POST['imgUrl']);
-      
+      $tag = $conn->real_escape_string($_POST['tags']);
+
       $sql = "UPDATE `posts` SET title='$title', postDesc='$postDesc' ,text='$text',imgUrl='$imgUrl' WHERE p_id='$postId'";
       $result = $conn->query($sql);
+
+      $tagSql = "UPDATE `posts_tags` SET t_ID='$tag' WHERE p_ID='$postId'";
+      $tagRes = $conn->query($tagSql);
 		
       if($result == TRUE) {
          header("location: index.php");
