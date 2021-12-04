@@ -74,6 +74,15 @@
                                     </textarea>
                                 </div>
                                 <div class="form-group">
+                                    <label for="tags">Choose a tag:</label>
+                                        <select name="tags" id="tags">
+                                            <option value="1">Entertainment</option>
+                                            <option value="2">Technology</option>
+                                            <option value="3">Education</option>
+                                            <option value="4">Literature</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary submit px-3">Publish</button>
                                 </div>
                             </form>

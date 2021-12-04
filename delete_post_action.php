@@ -11,6 +11,8 @@
    if($_SERVER["REQUEST_METHOD"] == "GET") {
         $sql = "DELETE FROM posts WHERE p_ID='$postId'";
         $result = $conn->query($sql);
+        $tagSql = "DELETE FROM posts_tags WHERE p_ID='$postId'";
+        $tagRes = $conn->query($tagSql);
 		
       if($result == TRUE) {
          header("location: index.php");
