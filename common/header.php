@@ -72,6 +72,10 @@
                                                     '<li class="nav-item">'.
                                                     '<a class="nav-link" href="./publish.php">Publish Post</a>'.
                                                     '</li>';
+                                                echo 
+                                                    '<li class="nav-item">'.
+                                                    '<a class="nav-link" href="./manage_tags.php">Manage Tags</a>'.
+                                                    '</li>';
 
                                                 echo 
                                                     '<li class="nav-item">'.
