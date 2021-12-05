@@ -27,7 +27,10 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
-<h1>Manage Tags</h1>
+<div class="container">
+   <div class="row justify-content-center">
+   <div class="col-md-10">
+<br><h1>Manage Tags</h1>
 <table>
     <tr>
         <td>Tag Name</td>
@@ -39,10 +42,16 @@ tr:nth-child(even) {
             <td><a href="./manage_tags_delete_action.php?tagID=<?php echo $tag['t_ID'] ?>" class="btn btn-primary">Delete</a></td>
         </tr>
     <?php endforeach; ?>
-</table>
+</table><br><hr>
+<div class="form-wrapper">
 <form action="manage_tags_create_action.php">
+      <h3>Add Tag</h3>
     <label for="tagName">Tag Name</label>
     <input name="tagName" type="text" />
     <input class="btn btn-primary" type="submit">
-</form>
+</form><hr>
+</div>
+   </div>
+   </div>
+   </div>
 <?php include("./common/footer.html"); ?>
