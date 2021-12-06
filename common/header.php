@@ -1,4 +1,4 @@
-<?php include_once('config.php') ?>
+f<?php include_once('config.php') ?>
 
 <?php 
     $username = "";
@@ -99,8 +99,10 @@
                                         ?>
                                         <div class="nav-search">
                                             <a class="active"</a>
-                                            <input type="text" placeholder="Search...">
-                                            <input type="submit" name=submit">
+                                            <form method="post" action="search.php">
+                                            <input name="Search" type="text" placeholder="Search...">
+                                            <input type="submit" name="submit">
+                                            </form>
                                         </div>
                                     </ul>
                                 </div>
