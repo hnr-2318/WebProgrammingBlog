@@ -1,12 +1,12 @@
-
-<?php include("./common/header.php"); ?>
-
 <?php 
+    session_start();
    if(!isset($_SESSION['username'])) 
    {
         header('Location: login.php');
    }
 ?>
+<?php include("./common/header.php"); ?>
+
 <!-- Get posts from database -->
 <?php
     // Connect to DB

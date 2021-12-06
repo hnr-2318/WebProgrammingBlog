@@ -1,5 +1,3 @@
-f<?php include_once('config.php') ?>
-
 <?php 
     $username = "";
     if (isset($_SESSION['username'])) {
