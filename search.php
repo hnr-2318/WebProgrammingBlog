@@ -7,6 +7,7 @@
 ?>
 <style>
 h1 {text-align: center;} 
+p {text-align: center; }
 </style>
 
 <h1> Search Results </h1>
@@ -19,9 +20,9 @@ h1 {text-align: center;}
     $queryResult = mysqli_num_rows($result); //check for results 
     
     if ($queryResult == 1) {
-    echo "There are ".$queryResult." result. ";
+    echo "<p>There is ".$queryResult." result.</p>";
     } else {
-        echo "There are ".$queryResult." results. ";
+        echo "<p>There are ".$queryResult." results.</p>";
     }
 
     if ($queryResult > 0) {
