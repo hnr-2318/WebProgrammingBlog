@@ -1,3 +1,4 @@
+<?php include_once("./config.php") ?>
  <!-- URL format /post.php?postId=<number> -->
 <?php include("./common/header.php") ?>
 <div class="container">

@@ -1,4 +1,5 @@
 <?php 
+    include_once("./config.php");
     include ("./common/header.php");  
     include ('./functions.php');
     $conn = connectToDatabase();

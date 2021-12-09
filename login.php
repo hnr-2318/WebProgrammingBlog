@@ -1,4 +1,4 @@
-<?php include("./common/header.php"); ?>
+<?php include_once("./common/header.php"); ?>
 <?php
    $failure = filter_input(INPUT_GET,'failure',FILTER_VALIDATE_INT);
    if ($failure == 1) {

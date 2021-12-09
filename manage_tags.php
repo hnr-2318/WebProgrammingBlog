@@ -1,3 +1,4 @@
+<?php include_once("./config.php") ?>
 <?php
      require __DIR__ . './functions.php';
     $conn = connectToDatabase();
