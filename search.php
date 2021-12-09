@@ -27,7 +27,7 @@ h1 {text-align: center;}
     if ($queryResult > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
            ?> 
-            <div class="row">
+            <div class="row justify-content-center" >
                             <div class="col-md-6">
                            <div class="our_img">
                               <figure><img src=<?php echo $row['imgUrl'] ?> alt="#"/></figure>
@@ -45,6 +45,7 @@ h1 {text-align: center;}
                         </div>
                         
                      </div>
+                  
                      
          </div>
       </div> <?php
