@@ -29,4 +29,15 @@
         return $row[4];
     }
 
+    function getUserIdByUserName($username) {
+         $conn = connectToDatabase();
+        $conn->select_db("blogs");
+        $sql = "SELECT * FROM users where username='$username'";
+        $res = $conn->query($sql);
+        $row = $res->fetch_row();
+        echo $row[0];
+        //exit(0);
+        return $row[0];
+    }
+
 ?>

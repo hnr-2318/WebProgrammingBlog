@@ -10,7 +10,8 @@
     $conn = connectToDatabase();
     $conn->select_db("blogs");
     $postId = filter_input(INPUT_GET,'postId',FILTER_VALIDATE_INT);
-    $authorId = $_SESSION['username'];
+    $authorId =  getUserIdByUserName($_SESSION['username']);
+
    if ($postId == NULL || $postId == FALSE) {
        $postId = 1;
    }
